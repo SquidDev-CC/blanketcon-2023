@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "blanketcon-2023"
+version = "0.1.0"
+description = ""
+authors = ["Jonathan Coates <git@squiddev.cc>"]
+license = "BSD-3-Clause"
+packages = [{include = "blanketcon_2023"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiohttp = "^3.8.5"
+Pillow = "^10.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+bc_skin_server = "blanketcon_2023.skin_server:main"
